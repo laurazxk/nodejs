@@ -9,7 +9,7 @@ admin.initializeApp({
     // O replace é necessário para o Render ler a chave privada corretamente
     privateKey: process.env.FIREBASE_PRIVATE_KEY ? process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n') : undefined,
   }),
-  databaseURL: "https://aula1-60698-default-rtdb.firebaseio.com/"
+  databaseURL: "https://nodejs-e6c74-default-rtdb.firebaseio.com/"
 });
 
 const db = admin.database();
