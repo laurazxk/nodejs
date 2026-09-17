@@ -1,20 +1,26 @@
 const model = require("../models/fornecedorModel");
 
-//listar
+// listar
 exports.index = async (req, res) => {
+
     let fornecedores = await model.listar();
 
     res.render("fornecedores/index", {
         fornecedores,
         fornecedorEditar: null
     });
+
 };
 
-//salvar
+// salvar
 exports.salvar = async (req, res) => {
+
     await model.salvar({
-        nome: req.body.nome.toUpperCase()
+        nome: req.body.nome.toUpperCase(),
+        cnpj: req.body.cnpj
     });
 
     res.redirect("/fornecedores");
+
 };
+
